@@ -24,7 +24,7 @@ def get_reads(read_path):
             's': read.reference_start + ref_start,
             'e': read.reference_end + ref_start,
             'sup': read.is_supplementary,
-             'chr': ref_name,
+            'chr': ref_name,
             'name': read.qname,
             'rev': read.is_reverse,
             'sec': read.is_secondary,
@@ -62,6 +62,9 @@ def map_read_by_segment(seg_path, reads):
                 #     read['ref_pos_to_query_pos'].keys()
                 #     segment_end_pos_in_read = read['ref_pos_to_query_pos'][end-1]
                 #     print('wtf!!!')
+                if read['rev']:
+                    segment_start_pos_in_read, segment_end_pos_in_read = segment_end_pos_in_read, segment_start_pos_in_read
+
                 seg_to_read[name].append({
                     'segment_start_pos_in_read': segment_start_pos_in_read,
                     'segment_end_pos_in_read': segment_end_pos_in_read,
