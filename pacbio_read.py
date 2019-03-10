@@ -5,7 +5,8 @@ import collections
 import bisect
 
 READ_PATH = 'data/merged.bam'
-SEGMENT_PATH = 'data/segments.csv'
+# SEGMENT_PATH = 'data/segments.csv'
+SEGMENT_PATH = 'data/segbeffus.csv'
 SEGMENT_IN_READ_POS_THRESHOLD = 10
 
 
@@ -34,7 +35,7 @@ def get_reads(read_path):
 
 
 def map_read_by_segment(seg_path, reads):
-    segments = genfromtxt(seg_path, delimiter='\t', dtype=str)
+    segments = genfromtxt(seg_path, delimiter=' ', dtype=str)
     seg_to_read = {}
     for segment in segments:
         _, name, chr, start, end = segment
