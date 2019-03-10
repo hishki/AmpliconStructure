@@ -17,7 +17,8 @@ def get_reads(read_path):
         ref_start = int(read.reference_name.split(':')[1].split('-')[0])
         ref_pos_to_query_pos = {}
         for query_pos, ref_pos in read.get_aligned_pairs(True):
-                ref_pos_to_query_pos[ref_start + ref_pos] = query_pos
+            query_pos = read.query_length - query_pos - 1 if read.is_reverse else query_pos
+            ref_pos_to_query_pos[ref_start + ref_pos] = query_pos
         ref_pos_to_query_pos = collections.OrderedDict(ref_pos_to_query_pos)
         all_reads.append({
             's': read.reference_start + ref_start,
