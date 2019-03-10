@@ -41,6 +41,10 @@ def map_read_by_segment(seg_path, reads):
         start, end = int(start), int(end)
         seg_to_read[name] = []
         for read in reads:
+            _, name, chr, start, end = segment
+            start, end = int(start), int(end)
+            # if read['name'].endswith('85811') and name == '47':
+            #     print("kale kiri")
             if ((read['s'] <= start + SEGMENT_IN_READ_POS_THRESHOLD <= read['e']) or
                 (read['s'] <= end <= read['e'] + SEGMENT_IN_READ_POS_THRESHOLD)) and chr.lower()[0:5] == read['chr'].lower()[0:5]:
                 if start < read['s']:
