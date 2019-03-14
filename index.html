@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<body>
+<script src="https://d3js.org/d3.v4.min.js"></script>
+<script src="https://unpkg.com/viz.js@1.8.0/viz.js" type="javascript/worker"></script>
+<script src="https://unpkg.com/d3-graphviz@1.4.0/build/d3-graphviz.min.js"></script>
+<div id="graph" style="text-align: center;"></div>
+<script>
+
+d3.select("#graph").graphviz()
+    .fade(false)
+    .renderDot('graph graphname {\n' +
+        'b21 -- e21 [color=blue];\n' +
+        'e21 -- b22;\n' +
+        'b21 -- b54 [color=green];\n' +
+        'b22 -- e22 [color=blue];\n' +
+        'e22 -- b23;\n' +
+        'b23 -- e23 [color=blue];\n' +
+        'e23 -- b24;\n' +
+        'b24 -- e24 [color=blue];\n' +
+        'e24 -- b25;\n' +
+        'b36 -- e36 [color=blue];\n' +
+        'e36 -- b37;\n' +
+        'b37 -- e37 [color=blue];\n' +
+        'e37 -- b38;\n' +
+        'b38 -- e38 [color=blue];\n' +
+        'e38 -- b39;\n' +
+        'b40 -- e40 [color=blue];\n' +
+        'e40 -- b41;\n' +
+        'b41 -- e41 [color=blue];\n' +
+        'e41 -- b41;\n' +
+        'e41 -- b42;\n' +
+        'b42 -- e42 [color=blue];\n' +
+        'e42 -- b42;\n' +
+        'e42 -- b43;\n' +
+        'b43 -- e43 [color=blue];\n' +
+        'e43 -- b44;\n' +
+        'b44 -- e44 [color=blue];\n' +
+        'e44 -- b45;\n' +
+        'b45 -- e45 [color=blue];\n' +
+        'e45 -- b46;\n' +
+        'b46 -- e46 [color=blue];\n' +
+        'e46 -- b47;\n' +
+        'b49 -- e49 [color=blue];\n' +
+        'b49 -- e49;\n' +
+        'e49 -- b50;\n' +
+        'b50 -- e50 [color=blue];\n' +
+        'e50 -- b51;\n' +
+        'b51 -- e51 [color=blue];\n' +
+        'e51 -- b52;\n' +
+        'e51 -- b53;\n' +
+        'e51 -- b54;\n' +
+        'b52 -- e52 [color=blue];\n' +
+        'e52 -- b53;\n' +
+        'e52 -- b54;\n' +
+        'b53 -- e53 [color=blue];\n' +
+        'e53 -- b53;\n' +
+        'e53 -- b54;\n' +
+        'e53 -- b55;\n' +
+        'b54 -- e54 [color=blue];\n' +
+        'e54 -- b55;\n' +
+        'e54 -- b56;\n' +
+        'e54 -- b57;\n' +
+        'b55 -- e55 [color=blue];\n' +
+        'e55 -- b56;\n' +
+        'e55 -- b57;\n' +
+        'b56 -- e56 [color=blue];\n' +
+        'e56 -- b56;\n' +
+        'e56 -- b57;\n' +
+        'b57 -- e57 [color=blue];\n' +
+        'e57 -- b58;\n' +
+        'e57 -- b59;\n' +
+        'b58 -- e58 [color=blue];\n' +
+        'e58 -- b59;\n' +
+        'e58 -- b60;\n' +
+        'b59 -- e59 [color=blue];\n' +
+        'e59 -- b60;\n' +
+        'e59 -- b61;\n' +
+        'e59 -- b62;\n' +
+        'b60 -- e60 [color=blue];\n' +
+        'e60 -- b61;\n' +
+        'e60 -- b62;\n' +
+        'b61 -- e61 [color=blue];\n' +
+        'e61 -- b62;\n' +
+        'b62 -- e62 [color=blue];\n' +
+        'e62 -- b63;\n' +
+        'b63 -- e63 [color=blue];\n' +
+        'e63 -- b64;\n' +
+        'b64 -- e64 [color=blue];\n' +
+        'e64 -- b65;\n' +
+        'e64 -- b66;\n' +
+        'b65 -- e65 [color=blue];\n' +
+        'e65 -- b65;\n' +
+        'e65 -- b66;\n' +
+        'b66 -- e66 [color=blue];\n' +
+        'e66 -- b67;\n' +
+        'e66 -- b68;\n' +
+        'b67 -- e67 [color=blue];\n' +
+        'e67 -- b68;\n' +
+        'b68 -- e68 [color=blue];\n' +
+        'e68 -- b69;\n' +
+        'e68 -- b70;\n' +
+        'e68 -- b71;\n' +
+        'e68 -- b72;\n' +
+        'b69 -- e69 [color=blue];\n' +
+        'e69 -- b70;\n' +
+        'e69 -- b71;\n' +
+        'e69 -- b72;\n' +
+        'b70 -- e70 [color=blue];\n' +
+        'e70 -- b71;\n' +
+        'e70 -- b72;\n' +
+        'b71 -- e71 [color=blue];\n' +
+        'e71 -- b72;\n' +
+        'e71 -- b73;\n' +
+        'b72 -- e72 [color=blue];\n' +
+        'e72 -- b73;\n' +
+        'b73 -- e73 [color=blue];\n' +
+        'e73 -- b74;\n' +
+        'b74 -- e74 [color=blue];\n' +
+        'e74 -- b75;\n' +
+        'b75 -- e75 [color=blue];\n' +
+        'e75 -- b76;\n' +
+        'e75 -- b77;\n' +
+        'b76 -- e76 [color=blue];\n' +
+        'e76 -- b77;\n' +
+        'b77 -- e77 [color=blue];\n' +
+        'e77 -- b78;\n' +
+        'e77 -- b79;\n' +
+        'b78 -- e78 [color=blue];\n' +
+        'e78 -- b79;\n' +
+        'b79 -- e79 [color=blue];\n' +
+        'e79 -- b80;\n' +
+        'e79 -- b81;\n' +
+        'e79 -- b82;\n' +
+        'b80 -- e80 [color=blue];\n' +
+        'e80 -- b80;\n' +
+        'e80 -- b81;\n' +
+        'e80 -- b82;\n' +
+        'b81 -- e81 [color=blue];\n' +
+        'e81 -- b82;\n' +
+        'e81 -- b83;\n' +
+        'b82 -- e82 [color=blue];\n' +
+        'e82 -- b83;\n' +
+        'e82 -- b84;\n' +
+        'b83 -- e83 [color=blue];\n' +
+        'e83 -- b84;\n' +
+        'b84 -- e84 [color=blue];\n' +
+        'e84 -- b84;\n' +
+        '}');
+
+</script>
+
